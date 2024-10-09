@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "app1": {
+    "app2": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/app1",
+            "outputPath": "dist/app2",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -56,13 +56,14 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {"port": 4201},
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "app1:build:production"
+              "buildTarget": "app2:build:production"
             },
             "development": {
-              "buildTarget": "app1:build:development"
+              "buildTarget": "app2:build:development"
             }
           },
           "defaultConfiguration": "development"
